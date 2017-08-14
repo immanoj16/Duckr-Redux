@@ -7,9 +7,9 @@ require('./styles.css')
 class MainContainer extends React.Component {
   render () {
     return (
-      <div className="container">
+      <div className='container'>
         <Navigation isAuthed={true}/>
-        <div className="innerContainer">
+        <div className='innerContainer'>
           <Route component={HomeContainer} />
         </div>
       </div>
