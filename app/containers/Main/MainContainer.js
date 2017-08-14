@@ -4,7 +4,7 @@ import { HomeContainer } from '../../containers'
 class MainContainer extends React.Component {
   render () {
     return (
-          <HomeContainer />
+      <HomeContainer />
     )
   }
 }
