@@ -5,3 +5,53 @@ html, body {
     width: 100%;
     color: #5F5F5F;
 }
+
+.container {
+    width: 100%;
+}
+
+.innerContainer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.centeredContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.largeHeader {
+    color: #4a90e2;
+    font-weight: 100;
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.subHeader {
+    color: #4a90e2;
+    font-size: 35px;
+    text-align: center;
+    line-height: 55px;
+}
+
+.errorMsg {
+    color: #FF7777;
+    font-size: 22px;
+    text-align: center;
+}
+
+.button {
+    background: #3B5998;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    border-width: 0;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #1542A0;
+}

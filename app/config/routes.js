@@ -1,11 +1,28 @@
 import React from 'react'
-import { Route, HashRouter } from 'react-router-dom'
-import { MainContainer } from '../containers'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
+import createHistory from 'history/createBrowserHistory'
+
+import { MainContainer, AuthenticateContainer } from '../containers'
+import { Navigation } from '../components'
+
+const history = createHistory()
 
 const routes = (
-  <HashRouter>
-    <Route path='/' component={MainContainer} />
-  </HashRouter>
+  <Router>
+    <div className='container'>
+      <div className='innerContainer'>
+      <Navigation isAuthed={false}/>
+      <switch>
+        <Route exact path='/' component={MainContainer} />
+        <Route path='/auth' component={AuthenticateContainer} />
+      </switch>
+    </div>
+    </div>
+  </Router>
 )
 
 export default routes
