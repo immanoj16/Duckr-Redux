@@ -5,14 +5,14 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 
 import users from './redux/modules/users'
-import routes from './config/routes'
+import Routes from './config/Routes'
 require('./styles.css')
 
 const store = createStore(users, applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>
-    {routes}
+    <Routes/>
   </Provider>,
   document.getElementById('app')
 )
