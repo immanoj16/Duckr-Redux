@@ -1,12 +1,9 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import { MainContainer, AuthenticateContainer } from '../containers'
+import { MainContainer, AuthenticateContainer, FeedContainer } from '../containers'
 import { Navigation } from '../components'
 
 class Routes extends React.Component {
@@ -16,10 +13,11 @@ class Routes extends React.Component {
         <div className='container'>
           <div className='innerContainer'>
             <Navigation isAuthed={this.props.isAuthed}/>
-            <switch>
+            <Switch>
               <Route exact={true} path='/' component={MainContainer} />
               <Route path='/auth' component={AuthenticateContainer} />
-            </switch>
+              <Route path='/feed' component={FeedContainer} />
+            </Switch>
           </div>
         </div>
       </Router>
