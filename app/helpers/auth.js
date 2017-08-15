@@ -9,3 +9,9 @@ export default function auth () {
     }, 2000)
   })
 }
+
+export const checkIfAuthed = (store) => {
+  // Ignore firebase
+  console.log(store)
+  return store.getState().isAuthed
+}

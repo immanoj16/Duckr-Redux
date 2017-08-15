@@ -13,7 +13,7 @@ class AuthenticateContainer extends React.Component {
       .then(() => this.context.router.history.push('feed'))
   }
   render () {
-    console.log('Is fetching: ', this.props.isFetching)
+    // console.log('Is fetching: ', this.props.isFetching)
     return (
       <Authenticate
         isFetching={this.props.isFetching}
@@ -34,7 +34,7 @@ AuthenticateContainer.contextTypes = {
 }
 
 function mapStateToProps (state) {
-  console.log('state: ', state)
+  // console.log('state: ', state)
   return {
     isFetching: state.isFetching,
     error: state.error,
