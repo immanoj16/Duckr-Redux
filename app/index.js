@@ -29,7 +29,7 @@ const checkAuth = (nextState, replace) => {
 
 ReactDOM.render(
   <Provider store={store}>
-    <Routes checkAuth={checkAuth()} />
+    <Routes checkAuth={checkAuth} />
   </Provider>,
   document.getElementById('app')
 )

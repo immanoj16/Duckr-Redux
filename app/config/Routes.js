@@ -15,7 +15,7 @@ const Routes = (props) => {
           <Switch>
             <Route exact={true} path='/' component={MainContainer} />
             <Route path='/auth' component={AuthenticateContainer} />
-            <Route path='/feed' component={FeedContainer} onEnter={props.checkAuth()}/>
+            <Route path='/feed' component={FeedContainer} onEnter={props.checkAuth}/>
           </Switch>
         </div>
       </div>
